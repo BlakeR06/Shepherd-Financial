@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="topImg"></div>
+
+    <form action="https://script.google.com/macros/s/AKfycbxHx5HXx8gh2DQoNU3OG5kSLo_DKdLCASjQsbVcwRR4kvX7WdCWHGRA3gUdiyUvkxS7Uw/exec" method="post">
+
+        <input type="number" name="AmountOfRows" id="amountOfRows" readonly>
+
+        <div class="spreadsheet">
+            <div class="columnContainer" id="IndividualInvestorNameColumn">
+                <div class="columnHeader">Individual Investor Name</div>
+                <input class="input" type="text" name="IndividualInvestorName1" required>
+            </div>
+    
+            <div class="columnContainer" id="AmountColumn">
+                <div class="columnHeader">Amount</div>
+                <input class="input" type="text" name="Amount1" required>
+            </div>
+    
+            <div class="columnContainer" id="AssetTransferDateColumn">
+                <div class="columnHeader">Asset Transfer Date</div>
+                <input class="input dateInput" type="date" name="AssetTransferDate1" required>
+            </div>
+    
+            <div class="columnContainer" id="ProviderColumn">
+                <div class="columnHeader">Provider</div>
+                <input class="input" type="text" name="Provider1" required>
+            </div>
+    
+            <div class="columnContainer" id="FeeCommRateColumn">
+                <div class="columnHeader">Fee / Comm. Rate</div>
+                <input class="input" type="text" name="FeeCommRate1" required>
+            </div>
+    
+            <div class="columnContainer" id="Est1stYearRevenueColumn">
+                <div class="columnHeader">Est. 1st Year Revenue</div>
+                <input class="input" type="text" name="Est1stYearRevenue1" required>
+            </div>
+    
+            <div class="columnContainer" id="EstRecurringRevenueColumn">
+                <div class="columnHeader">Est. Recurring Revenue</div>
+                <input class="input" type="text" name="EstRecurringRevenue1" required>
+            </div>
+    
+            <div class="columnContainer" id="OpportunitySourceOrReferralColumn">
+                <div class="columnHeader">Opportunity Source or Referral</div>
+                <input class="input" type="text" name="OpportunitySourceOrReferral1" required>
+            </div>
+    
+            <div class="columnContainer" id="NotesAndOrCommentsColumn">
+                <div class="columnHeader">Notes &/or Comments</div>
+                <input class="input" type="text" name="NotesAndOrComments1">
+            </div>
+        </div>
+
+        <div class="advisorNameContainer">
+            <select name="AdvisorName" id="advisorName" required>
+                <option disabled selected value="">Advisor Name</option>
+                <option value="Michael">Michael</option>
+                <option value="Garret">Garret</option>
+                <option value="Jeff">Jeff</option>
+                <option value="Erin">Erin</option>
+                <option value="Tommy">Tommy</option>
+                <option value="John">John</option>
+                <option value="George">George</option>
+            </select>
+        </div>
+
+        <div>
+            <input type="submit" value="Submit" class="submitButton" id="submitButton">
+        </div>
+
+    </form>
+
+    <button onclick="AddNewRow()" class="newRowButton">Add New Row +</button>
+    <button class="deletePreviousRow" onclick="DeleteRow()">Delete Previous Row</button>
+
+</body>
+<script src="main.js"></script>
+</html>
